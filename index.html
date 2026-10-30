@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LYRA - Panel SMM Termurah</title>
+<style>
+*{box-sizing:border-box;font-family:'Segoe UI',Arial}
+body{margin:0;background:#080810;color:#fff}
+.top{background:linear-gradient(135deg,#a100ff,#ff006a);padding:28px 20px;text-align:center;border-radius:0 0 28px 28px}
+.top h1{margin:0;font-size:34px;letter-spacing:2px;font-weight:900}
+.top h1 span{color:#ffe600}
+.top p{margin:8px 0 0;font-size:13px;opacity:.9}
+.badge{background:rgba(0,0,0,.3);padding:6px 14px;border-radius:20px;font-size:11px;display:inline-block;margin-top:10px}
+.menu{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:16px}
+.item{background:#151525;border:1px solid #24243e;border-radius:18px;padding:14px;text-align:center}
+.item i{font-size:24px}
+.item b{display:block;margin:8px 0 3px;font-size:13px}
+.price{color:#00ff9d;font-weight:800;font-size:13px}
+.order{margin-top:8px;padding:7px 14px;border:none;border-radius:20px;background:#fff;color:#000;font-weight:800;font-size:11px}
+.form{background:#151525;margin:16px;border-radius:20px;padding:18px;border:1px solid #24243e}
+input,select{width:100%;padding:14px;border-radius:12px;border:1px solid #333;background:#0a0a18;color:#fff;margin:7px 0;font-size:14px}
+.btn{width:100%;padding:15px;border:none;border-radius:12px;font-weight:900;font-size:14px;cursor:pointer}
+.btn1{background:linear-gradient(90deg,#a100ff,#ff006a);color:#fff}
+.btn2{background:#25D366;color:#fff;margin-top:8px}
+.foot{text-align:center;opacity:.4;font-size:10px;padding:15px}
+</style>
+</head>
+<body>
+<div class="top">
+<h1>LYRA <span>PANEL</span></h1>
+<p>Panel SMM Indonesia Termurah & Tercepat</p>
+<div class="badge">⚡ AUTO • GARANSI • 24 JAM • WA 0878-1185-4174</div>
+</div>
+
+<div class="menu">
+<div class="item">❤️<b>IG Followers Indo</b><div class="price">15K / 1K</div><button class="order" onclick="setL('IG Followers Indo - 15K')">ORDER</button></div>
+<div class="item">💜<b>IG Likes Real</b><div class="price">5K / 1K</div><button class="order" onclick="setL('IG Likes - 5K')">ORDER</button></div>
+<div class="item">🎵<b>TikTok Followers</b><div class="price">20K / 1K</div><button class="order" onclick="setL('TikTok Followers - 20K')">ORDER</button></div>
+<div class="item">👁️<b>TikTok Views</b><div class="price">2K / 10K</div><button class="order" onclick="setL('TikTok Views - 2K')">ORDER</button></div>
+<div class="item">▶️<b>YouTube Subs</b><div class="price">35K / 1K</div><button class="order" onclick="setL('YT Subs - 35K')">ORDER</button></div>
+<div class="item">👁️<b>YouTube Views</b><div class="price">15K / 1K</div><button class="order" onclick="setL('YT Views - 15K')">ORDER</button></div>
+</div>
+
+<div class="form">
+<h3 style="margin:0 0 10px">🛒 Order - LYRA PANEL</h3>
+<input id="u" placeholder="Username @ (tanpa @)">
+<select id="l">
+<option>Pilih Layanan</option>
+<option>IG Followers Indo - 15K</option>
+<option>IG Likes - 5K</option>
+<option>TikTok Followers - 20K</option>
+<option>TikTok Views - 2K</option>
+<option>YT Subs - 35K</option>
+<option>YT Views - 15K</option>
+</select>
+<input id="j" type="number" placeholder="Jumlah (contoh: 1000)">
+<button class="btn btn1" onclick="go()">ORDER SEKARANG</button>
+<button class="btn btn2" onclick="wa()">💬 CHAT ADMIN LYRA</button>
+</div>
+<div class="foot">© LYRA PANEL • Pembayaran Dana OVO QRIS • verlin8.github.io/lyra-store-</div>
+
+<script>
+const WA="6287811854174";
+function setL(v){document.getElementById('l').value=v;window.scrollTo({top:9999,behavior:'smooth'})}
+function go(){
+let u=document.getElementById('u').value;
+let l=document.getElementById('l').value;
+let j=document.getElementById('j').value;
+if(!u||l.includes('Pilih')||!j){alert('Lengkapi username, layanan & jumlah ya!');return}
+let t=`Halo LYRA PANEL! Order:%0A%0ALayanan: ${l}%0AUsername: @${u}%0AJumlah: ${j}%0A%0AInfo harga kak!`;
+window.open(`https://wa.me/${WA}?text=${t}`,'_blank');
+}
+function wa(){window.open(`https://wa.me/${WA}?text=Halo Admin LYRA PANEL! Mau tanya layanan`,'_blank')}
+</script>
+</body>
+</html>
